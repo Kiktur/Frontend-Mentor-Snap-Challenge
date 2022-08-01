@@ -237,7 +237,6 @@ nav a {
     .nav {
         display: flex;
         flex-direction: row;
-        z-index: 1;
         position: static;
         padding: 0;
         background-color: inherit;
@@ -264,13 +263,17 @@ nav a {
         /*Save commented out properties for desktop layour*/
         position: absolute;
         background-color: #f9f9f9;
-        width: 140px;
+        width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 1;
     }
 
     .dropdown-content a {
         padding-left: 16px;
+    }
+
+    #feature-content {
+        margin-left: -32px;
     }
 
     #company-content {
