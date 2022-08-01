@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Epilogue', sans-serif;
+    --medium-gray: hsl(0, 0%, 41%);
+    --black: hsl(0, 0%, 8%);
+    --white: hsl(0, 0%, 98%)
+}
+
+
+
+a {
+    text-decoration: none;
+    color: var(--medium-gray);
+}
+
+button:hover {
+    cursor: pointer; 
+}
+
+.button {
+    background-color: var(--black);
+    padding: 16px 22px;
+    color: var(--white);
+    border: 1px solid var(--black);
+    border-radius: 16px;
+    display: inline-block;
+    font-size: 18px;
+}
+
+.button:hover {
+    background-color: var(--white);
+    color: var(--black);
+    
+}
+
+.hollow {
+    background-color: var(--white);
+    color: var(--medium-gray);
+    border-color: var(--medium-gray);
+}
+
+.hollow:hover {
+    color: var(--white);
+    background-color: var(--black);
+    cursor: pointer;
+    border-color: var(--black);
+}
+
+.full-width {
+    display: block;
+    width: 90%;
+}
+
+
+header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.logo {
+    margin: 16px 0 0 16px;
+}
+
+.nav-icon {
+    display: inline-block;
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    z-index: 2;
+    
+}
+
+.nav-icon:hover {
+    cursor: pointer;
+}
+
+.icon-bar {
+    height: 3px;
+    width: 32px;
+    background-color: var(--black);
+    border-radius: 4px;
+    margin: 6px;
+}
+
+
+.nav {
+    /*overflow: hidden;*/
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    right: 0;
+    top: 0; 
+    height: 100vh;
+    padding-top: 32px;
+    position: absolute;
+    z-index: 1;
+    background-color: var(--white);
+}
+
+.nav_main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+nav a {
+    float: left;
+    font-size: 16px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: var(--medium-gray);
+    
+}
+
+/*.dropdown {
+   float: left;
+   overflow: hidden;
+}*/
+
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    padding: 14px 16px;
+    font-family: inherit;
+    background-color: inherit;
+    margin: 0;
+    color: var(--medium-gray);
+}
+
+
+
+.dropdown-content {
+    
+    /*Save commented out properties for desktop layour*/
+   /* position: absolute;*/
+    background-color: #f9f9f9;
+    width: 100%;
+   /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);*/
+    /*z-index: 1;*/
+}
+
+.dropdown-content a {
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding-left: 32px;
+}
+
+.dropdown-link {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-link svg {
+    margin-right: 16px;
+    margin-bottom: 2px;
+}
+
+/*.dropdown:hover .dropdown-content {
+   display: block;
+}*/
+
+.account-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Main content styling */
+
+.main-image {
+    width: 100%;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 32px 8px;
+}
+
+.section-header {
+    font-size: 40px;
+}
+
+.section-text {
+    margin: 24px 0;
+    font-size: 18px;
+    color: var(--medium-gray);
+}
+
+.main-content_companies {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.company-logo {
+    height: 24px;
+}
+
+.hidden {
+    display: none;
+}
+
+/*Make width requirement 1440 at the end*/
+@media screen and (min-width: 1440px) {
+
+    .nav-icon {
+       display: none;
+    }
+
+    .logo {
+        margin: 0 24px;
+    }
+
+    header {
+        padding: 8px 0;
+    }
+    
+
+    .nav {
+        display: flex;
+        flex-direction: row;
+        z-index: 1;
+        position: static;
+        padding: 0;
+        background-color: inherit;
+        width: 100%;
+        align-items: center;
+        height: 60px;
+        overflow: hidden;
+        justify-content: space-between;
+        
+    }
+
+    .nav_main {
+        flex-direction: row;
+    }
+
+
+    .dropbtn {
+       min-width: 130px;
+       margin: 0;
+       padding: 0;
+    }
+
+    .dropdown-content {
+        /*Save commented out properties for desktop layour*/
+        position: absolute;
+        background-color: #f9f9f9;
+        width: 140px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        padding-left: 16px;
+    }
+
+    #company-content {
+        margin-left: 16px;
+    }
+    
+
+    .main-content {
+        flex-direction: row-reverse;
+    }
+
+    .main-content_not-image {
+        padding-top: 32px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;;
+        width: 100%;
+    }
+
+    .main-image {
+        content:url("images/image-hero-desktop.png");
+        width: 30%;
+    }
+
+    .main-content_text {
+        align-items: flex-start;
+        justify-content: space-between;
+        text-align: left;
+        margin: 0 60px 120px;
+        height: 60vh;
+        width: 70%;
+    }
+
+    .main-content_companies {
+        width: 100%;
+    }
+
+    .section-header {
+        font-size: 85px;
+    }
+
+    .section-text {
+        line-height: 1.8;
+        width: 70%;
+       
+    }
+
+    .account-info {
+        flex-direction: row;
+        width: auto;
+        margin-right: 32px;
+    }
+
+    .full-width {
+        width: auto;
+    }
+
+    #audiophile-logo {
+        height: 32px;
+    }
+
+}
