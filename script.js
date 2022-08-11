@@ -1,6 +1,8 @@
 function displayNav() {
     const nav = document.getElementById("nav");
+    const overlay = document.getElementById("overlay-element");
     nav.classList.toggle("hidden");
+    overlay.classList.toggle("hidden");
 };
 
 function displayFeatures() {
