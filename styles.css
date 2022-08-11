@@ -303,6 +303,7 @@ nav a {
         width: 32%;
        /* height: 20%; */
         margin-right: 10%;
+        object-fit: contain;
     }
 
     .main-content_text {
