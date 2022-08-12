@@ -189,8 +189,12 @@ nav a {
 
 /* Main content styling */
 
-.main-image {
+#mobile-image {
     width: 100%;
+}
+
+#desktop-image {
+    display: none;
 }
 
 .main-content {
@@ -309,11 +313,16 @@ nav a {
         width: 100%;
     }
 
-    .main-image {
-        content:url("images/image-hero-desktop.png");
-        width: 32%;
-       /* height: 20%; */
-        margin-right: 10%;
+    
+
+    #mobile-image {
+        display: none;
+    }
+
+    #desktop-image {
+        display: block;
+        height: fit-content;
+        width: 80%;
         object-fit: contain;
     }
 
@@ -332,7 +341,7 @@ nav a {
     }
 
     .section-header {
-        font-size: 75px;
+        font-size: 78px;
     }
 
     .section-text {
